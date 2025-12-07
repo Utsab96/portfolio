@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utsab Ghosh - Backend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #22d3ee, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #22d3ee;
+        }
+        
+        .card {
+            transition: border-color 0.3s;
+        }
+        
+        .card:hover {
+            border-color: rgba(34, 211, 238, 0.5);
+        }
+        
+        .btn {
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-700">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold gradient-text">Utsab Ghosh</h1>
+                <div class="flex gap-6">
+                    <a href="#about" class="nav-link text-slate-300">About</a>
+                    <a href="#experience" class="nav-link text-slate-300">Experience</a>
+                    <a href="#projects" class="nav-link text-slate-300">Projects</a>
+                    <a href="#skills" class="nav-link text-slate-300">Skills</a>
+                    <a href="#contact" class="nav-link text-slate-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1">
+                    <div class="inline-block mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm">
+                        Backend Developer
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Building Scalable
+                        <span class="block gradient-text">
+                            AI-Powered Solutions
+                        </span>
+                    </h1>
+                    <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+                        Backend Engineer with 1+ years of experience specializing in Node.js, Python, and AI integrations. 
+                        Passionate about building robust APIs and intelligent automation systems.
+                    </p>
+                    <div class="flex gap-4 mb-8">
+                        <a href="mailto:utsab.ghosh96@gmail.com" class="btn flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            Get in Touch
+                        </a>
+                        <a href="https://github.com/Utsab96" target="_blank" class="btn flex items-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="flex gap-6 text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span>Kolkata, India</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span>+91 9564449544</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full opacity-20 absolute blur-3xl"></div>
+                        <div class="relative w-64 h-64 bg-slate-800 rounded-2xl border border-slate-700 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 bg-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-12">
+                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <h2 class="text-4xl font-bold">Experience</h2>
+            </div>
+            <div class="card bg-slate-900/50 border border-slate-700 rounded-xl p-8">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-cyan-400">Software Engineer</h3>
+                        <p class="text-xl text-slate-300">Web Spiders India Pvt. Ltd.</p>
+                    </div>
+                    <span class="mt-2 md:mt-0 px-4 py-2 bg-slate-800 rounded-lg text-slate-300">Dec 2024 – Present</span>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex gap-3 text-slate-300">
+                        <span class="text-cyan-400 mt-1">▹</span>
+                        <span>Designed scalable backend APIs using Node.js, Express.js, and PostgreSQL with Supabase and Firebase integration</span>
+                    </li>
+                    <li class="flex gap-3 text-slate-300">
+                        <span class="text-cyan-400 mt-1">▹</span>
+                        <span>Implemented AI automation pipelines using OpenAI, Perplexity, and Gemini APIs for structured data analysis</span>
+                    </li>
+                    <li class="flex gap-3 text-slate-300">
+                        <span class="text-cyan-400 mt-1">▹</span>
+                        <span>Built AI recruiting tools with Vapi voice assistants and Eleven Labs speech synthesis</span>
+                    </li>
+                    <li class="flex gap-3 text-slate-300">
+                        <span class="text-cyan-400 mt-1">▹</span>
+                        <span>Developed object detection and face recognition modules using YOLO-World and YOLO11VN-Face</span>
+                    </li>
+                    <li class="flex gap-3 text-slate-300">
+                        <span class="text-cyan-400 mt-1">▹</span>
+                        <span>Enhanced system performance through SonarQube, Jest, and Dockerized microservices</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-12">
+                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+                <h2 class="text-4xl font-bold">Featured Projects</h2>
+            </div>
+            <div class="card bg-slate-800/50 border border-slate-700 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-cyan-400 mb-2">Gecko – AI Recruiter Automation Platform</h3>
+                <p class="text-slate-400 mb-4">Web Spiders India Pvt. Ltd. • Apr 2024 – Present</p>
+                <p class="text-slate-300 mb-6">An AI-powered recruitment platform leveraging voice AI and LLMs to automate candidate screening</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex gap-3 text-slate-300">
+                        <span class="text-cyan-400">•</span>
+                        <span>Developed backend APIs with Node.js and PostgreSQL, integrating Supabase</span>
+                    </li>
+                    <li class="flex gap-3 text-slate-300">
+                        <span class="text-cyan-400">•</span>
+                        <span>Built voice interview automation using Vapi Voice AI and ElevenLabs TTS</span>
+                    </li>
+                    <li class="flex gap-3 text-slate-300">
+                        <span class="text-cyan-400">•</span>
+                        <span>Improved screening speed by 60%</span>
+                    </li>
+                </ul>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm">Node.js</span>
+                    <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm">PostgreSQL</span>
+                    <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm">AI</span>
+                    <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm">Voice AI</span>
+                    <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm">Supabase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-12">
+                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+                </svg>
+                <h2 class="text-4xl font-bold">Technical Skills</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Python</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">ES6</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Backend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Express.js</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Fast API</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Flask</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">MongoDB</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Supabase</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Firebase</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">AI</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">OpenAI API</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Gemini API</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Perplexity API</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Eleven Labs</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">YOLO</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Git</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Jest</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">SonarQube</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-300 text-sm">Postman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-12">
+                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+                </svg>
+                <h2 class="text-4xl font-bold">Education & Certifications</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-8">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">B.Tech in Robotics & Automation</h3>
+                    <p class="text-slate-300 mb-2">The Neotia University</p>
+                    <p class="text-slate-400">2021 – 2024 • CGPA: 8.54</p>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-8">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Certifications</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                            HackerRank 3★ in Problem Solving
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                            HackerRank 3★ in Python
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                            AI-ML Certifications from AILABS
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-slate-800/50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Let's Build Something Together</h2>
+            <p class="text-xl text-slate-300 mb-8">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:utsab.ghosh96@gmail.com" class="btn flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    Email Me
+                </a>
+                <a href="https://linkedin.com/in/utsab96" target="_blank" class="btn flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/Utsab96" target="_blank" class="btn flex items-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-slate-700">
+        <div class="max-w-6xl mx-auto text-center text-slate-400">
+            <p>© 2024 Utsab Ghosh. Built with HTML, CSS & Tailwind.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
