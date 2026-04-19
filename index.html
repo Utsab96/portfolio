@@ -31,6 +31,9 @@
             background: var(--bg);
             color: var(--text);
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
 
         /* dot grid bg */
@@ -64,7 +67,7 @@
         }
         .nav-logo {
             font-family:'Outfit',sans-serif;
-            font-size:1rem; font-weight:700;
+            font-size:1rem; font-weight:800;
             letter-spacing:0.04em;
             color:var(--text);
         }
@@ -108,9 +111,9 @@
         }
         h1.name {
             font-size: clamp(3.5rem, 7vw, 6rem);
-            font-weight:900;
+            font-weight:950;
             line-height:0.95;
-            letter-spacing:-0.03em;
+            letter-spacing:-0.04em;
             color:var(--text);
             margin-bottom:16px;
         }
@@ -119,33 +122,52 @@
             display:block;
         }
         .hero-role {
-            font-size:1.05rem; font-weight:500;
-            color:var(--text2); letter-spacing:0.04em;
+            font-size:1.1rem; font-weight:600;
+            color:var(--text); letter-spacing:0.02em;
             margin-bottom:28px;
         }
         .hero-desc {
-            font-size:1rem; font-weight:300;
+            font-size:1rem; font-weight:400;
             line-height:1.8; color:var(--text2);
             max-width:520px; margin-bottom:40px;
         }
         .hero-btns { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:44px; }
 
         .btn-cta {
-            font-size:0.82rem; font-weight:600;
+            font-size:0.82rem; font-weight:700;
             letter-spacing:0.08em; text-transform:uppercase;
             display:inline-flex; align-items:center; gap:8px;
-            padding:13px 26px; border-radius:6px;
-            text-decoration:none; transition:all 0.22s;
+            padding:14px 28px; border-radius:8px;
+            text-decoration:none; transition:all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor:pointer; border:none;
         }
         .btn-cta.primary {
-            background:var(--accent); color:#04080f;
+            background:linear-gradient(135deg, var(--accent), #00bfe8);
+            color:#04080f;
+            box-shadow:0 4px 16px rgba(0,212,255,0.25);
         }
-        .btn-cta.primary:hover { background:#00bfe8; transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,212,255,0.28); }
+        .btn-cta.primary:hover { 
+            background:linear-gradient(135deg, #00bfe8, #0099cc);
+            transform:translateY(-3px); 
+            box-shadow:0 12px 32px rgba(0,212,255,0.35);
+        }
+        .btn-cta.primary:active {
+            transform:translateY(-1px);
+        }
         .btn-cta.ghost {
             background:transparent; color:var(--text);
-            border:1px solid var(--border);
+            border:1.5px solid var(--border);
         }
-        .btn-cta.ghost:hover { border-color:var(--accent-border); color:var(--accent); transform:translateY(-2px); }
+        .btn-cta.ghost:hover { 
+            border-color:var(--accent);
+            color:var(--accent); 
+            background:rgba(0,212,255,0.08);
+            transform:translateY(-3px);
+            box-shadow:0 8px 24px rgba(0,212,255,0.15);
+        }
+        .btn-cta.ghost:active {
+            transform:translateY(-1px);
+        }
 
         .hero-meta { display:flex; flex-direction:column; gap:8px; }
         .meta-row {
@@ -214,16 +236,23 @@
         .stat-pill {
             background:var(--bg-card);
             border:1px solid var(--border);
-            border-radius:8px; padding:14px 16px;
+            border-radius:8px; padding:18px 16px;
+            transition:border-color 0.3s, background 0.3s;
+        }
+        .stat-pill:hover {
+            border-color:var(--accent-border);
+            background:rgba(0,212,255,0.04);
         }
         .stat-pill-num {
-            font-size:1.6rem; font-weight:800;
+            font-size:2.2rem; font-weight:900;
             color:var(--accent); line-height:1;
+            letter-spacing:-0.02em;
         }
         .stat-pill-label {
-            font-size:0.72rem; font-weight:500;
-            color:var(--text2); margin-top:4px;
-            letter-spacing:0.04em;
+            font-size:0.75rem; font-weight:600;
+            color:var(--text2); margin-top:8px;
+            letter-spacing:0.08em;
+            text-transform:uppercase;
         }
 
         /* ── SECTIONS ── */
@@ -241,7 +270,7 @@
         }
         h2.sec-title {
             font-size:clamp(1.9rem,3.5vw,2.8rem);
-            font-weight:800; letter-spacing:-0.02em;
+            font-weight:950; letter-spacing:-0.03em;
             color:var(--text);
             margin-bottom:52px;
         }
@@ -286,14 +315,14 @@
         }
         .tl-right { padding:0 0 48px 40px; }
         .tl-role {
-            font-size:1.2rem; font-weight:700;
-            color:var(--text); margin-bottom:4px;
+            font-size:1.25rem; font-weight:800;
+            color:var(--text); margin-bottom:6px;
         }
         .tl-company {
             display:inline-flex; align-items:center; gap:6px;
-            font-size:0.85rem; font-weight:500;
+            font-size:0.88rem; font-weight:600;
             color:var(--accent); text-decoration:none;
-            margin-bottom:18px; transition:color 0.2s;
+            margin-bottom:20px; transition:color 0.2s;
         }
         .tl-company:hover { color:#00bfe8; }
         .tl-company svg { width:12px;height:12px; }
@@ -313,13 +342,13 @@
             background:var(--bg-card);
             border:1px solid var(--border);
             border-radius:10px; padding:28px;
-            transition:border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+            transition:border-color 0.3s, transform 0.3s, box-shadow 0.3s;
             text-decoration:none; color:inherit; display:block;
         }
         .proj-card:hover {
             border-color:var(--accent-border);
-            transform:translateY(-5px);
-            box-shadow:var(--glow);
+            transform:translateY(-8px);
+            box-shadow:0 16px 48px rgba(0,212,255,0.15);
         }
         .proj-num {
             font-family:'JetBrains Mono',monospace;
@@ -365,9 +394,13 @@
         .skill-block {
             background:var(--bg-card); border:1px solid var(--border);
             border-radius:10px; padding:24px;
-            transition:border-color 0.2s;
+            transition:border-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
-        .skill-block:hover { border-color:var(--accent-border); }
+        .skill-block:hover { 
+            border-color:var(--accent-border);
+            transform:translateY(-4px);
+            box-shadow:0 8px 24px rgba(0,212,255,0.12);
+        }
         .skill-label {
             font-family:'JetBrains Mono',monospace;
             font-size:0.66rem; letter-spacing:0.16em; text-transform:uppercase;
@@ -401,15 +434,20 @@
             background:var(--bg-card); border:1px solid var(--border);
             border-radius:10px; padding:36px;
             position:relative; overflow:hidden;
+            transition:border-color 0.3s, transform 0.3s;
+        }
+        .edu-card:hover {
+            border-color:var(--accent-border);
+            transform:translateY(-4px);
         }
         .edu-card::after {
             content:'';
-            position:absolute; top:0; left:0; bottom:0; width:2px;
+            position:absolute; top:0; left:0; bottom:0; width:3px;
             background:linear-gradient(180deg,var(--accent),transparent);
         }
         .edu-deg {
-            font-size:1.2rem; font-weight:700; color:var(--text);
-            margin-bottom:8px;
+            font-size:1.3rem; font-weight:800; color:var(--text);
+            margin-bottom:10px;
         }
         .edu-school {
             display:inline-flex; align-items:center; gap:6px;
@@ -433,7 +471,7 @@
         .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
         .contact-head {
             font-size:clamp(2rem,4vw,3.2rem);
-            font-weight:800; letter-spacing:-0.02em;
+            font-weight:950; letter-spacing:-0.03em;
             line-height:1.1; color:var(--text); margin-bottom:18px;
         }
         .contact-head span { color:var(--accent); }
@@ -444,12 +482,16 @@
         .contact-links { display:flex; flex-direction:column; gap:12px; }
         .c-link {
             display:flex; align-items:center; gap:14px;
-            padding:16px 18px; border-radius:8px;
+            padding:18px 20px; border-radius:8px;
             background:var(--bg-card); border:1px solid var(--border);
             text-decoration:none; color:var(--text);
-            transition:border-color 0.2s, transform 0.2s;
+            transition:border-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
-        .c-link:hover { border-color:var(--accent-border); transform:translateX(5px); }
+        .c-link:hover { 
+            border-color:var(--accent-border); 
+            transform:translateX(8px); 
+            box-shadow:0 8px 24px rgba(0,212,255,0.12);
+        }
         .c-link-icon {
             width:36px;height:36px; border-radius:6px;
             background:var(--accent-low); border:1px solid var(--accent-border);
@@ -536,7 +578,7 @@
     <div>
       <div class="hero-eyebrow fi"><div class="hero-eyebrow-dot"></div>Available for Opportunities</div>
       <h1 class="name fi">Utsab<br><span class="hl">Ghosh</span></h1>
-      <p class="hero-role fi">Robotics Engineer &amp; AI Trainer</p>
+      <p class="hero-role fi">Robotics  &amp; Automation Engineer</p>
       <p class="hero-desc fi">Building intelligent robotic systems and AI-powered platforms. Specializing in embedded systems, computer vision, ROS, and backend automation — bridging the physical and digital world.</p>
       <div class="hero-btns fi">
         <a href="mailto:utsab.ghosh96@gmail.com" class="btn-cta primary">
@@ -632,7 +674,7 @@
           <div class="tl-date">Jan 2024<br>— Jun 2024</div>
         </div>
         <div class="tl-right">
-          <div class="tl-role">Software Engineering Intern</div>
+          <div class="tl-role">Robotics Engineer Intern </div>
           <a href="https://togethersolutions.co.in/" target="_blank" class="tl-company">
             Togethers Solutions
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
